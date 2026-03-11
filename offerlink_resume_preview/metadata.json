@@ -1,0 +1,43 @@
+{
+    "title": "OfferLink Chrome Extension - Resume Preview Component",
+    "summary": "Complete knowledge about the OfferLink Chrome extension's resume preview component, including reverse engineering findings from the original Po component, implementation architecture, data model alignment with the editor, clipboard copy mechanism in iframe environments, and z-index toast rendering solutions. Covers the full workflow from analyzing minified code to reconstructing a feature-complete component. Includes walkthroughs from both the initial panel reconstruction and the resume preview enhancement sessions.",
+    "created_at": "2026-03-10T09:51:52+08:00",
+    "updated_at": "2026-03-10T09:55:32+08:00",
+    "tags": [
+        "chrome-extension",
+        "offerlink",
+        "reverse-engineering",
+        "react",
+        "clipboard-api",
+        "iframe"
+    ],
+    "artifacts": [
+        "artifacts/resume_preview_complete.md",
+        "artifacts/project_architecture.md",
+        "artifacts/chrome_extension_iframe_pitfalls.md",
+        "artifacts/walkthrough_panel_reconstruction.md",
+        "artifacts/walkthrough_preview_enhancement.md"
+    ],
+    "references": [
+        {
+            "type": "conversation",
+            "id": "2a36a72d-9d3a-4f8a-a993-253a22be867c",
+            "title": "Resume Preview Enhancement"
+        },
+        {
+            "type": "conversation",
+            "id": "c4cdc40f-a56b-4ea6-95e4-572860f3c026",
+            "title": "OfferLink Panel Reconstruction"
+        },
+        {
+            "type": "repository",
+            "url": "https://github.com/syntaxsage2/getOffer",
+            "title": "getOffer Repository"
+        },
+        {
+            "type": "issue",
+            "url": "https://github.com/syntaxsage2/getOffer/issues/3",
+            "title": "简历预览组件缺失点击复制及多项功能"
+        }
+    ]
+}
