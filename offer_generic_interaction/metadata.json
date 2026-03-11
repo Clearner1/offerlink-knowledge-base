@@ -1,0 +1,38 @@
+{
+    "title": "OfferLink Generic Interaction Strategy",
+    "summary": "Architecture and implementation of framework-agnostic UI interaction for the OfferLink Chrome extension. Covers: (1) PopupDetector using MutationObserver to detect popups by position/z-index/area instead of CSS classes, (2) GenericInteraction with findByText/findNavButtons/navigateCalendar/selectOption for text-semantic-based element interaction, (3) mixed strategy where known frameworks use CSS selector fast paths and unknown frameworks use generic text-based interaction, (4) 3-step date fallback: keyboard input → popup calendar → force set, (5) comparison with agent-browser (Vercel Labs) accessibility tree approach. Also includes LLM field mapping proposal for solving the field name matching problem separately.",
+    "references": [
+        {
+            "type": "conversation",
+            "id": "ddf72919-b657-4fcc-ac5e-84bd68ac0acf",
+            "description": "Conversation where generic interaction strategy was designed, compared with agent-browser, and implemented"
+        },
+        {
+            "type": "file",
+            "path": "/Users/zane/Downloads/inbox/getOffer/src/content/utils/popupDetector.js",
+            "description": "MutationObserver-based framework-agnostic popup detection"
+        },
+        {
+            "type": "file",
+            "path": "/Users/zane/Downloads/inbox/getOffer/src/content/utils/genericInteraction.js",
+            "description": "Text-semantic-based element interaction utilities"
+        },
+        {
+            "type": "file",
+            "path": "/Users/zane/Downloads/inbox/getOffer/src/content/utils/dateHelper.js",
+            "description": "Date picker with mixed strategy (framework fast path + generic fallback)"
+        },
+        {
+            "type": "file",
+            "path": "/Users/zane/Downloads/inbox/getOffer/src/content/utils/selectHelper.js",
+            "description": "Select dropdown with generic PopupDetector fallback"
+        },
+        {
+            "type": "external",
+            "url": "https://github.com/vercel-labs/agent-browser",
+            "description": "Vercel's agent-browser project analyzed for architectural inspiration"
+        }
+    ],
+    "created": "2026-03-10T16:13:00+08:00",
+    "lastUpdated": "2026-03-10T16:13:00+08:00"
+}
