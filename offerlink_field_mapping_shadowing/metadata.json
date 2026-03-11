@@ -1,0 +1,24 @@
+{
+    "title": "OfferLink Field Mapping Shadowing Bug Pattern",
+    "summary": "Documents a critical bug pattern in OfferLink's FormFiller where server-side cached fieldMappings shadow correct local field maps. When server mappings match a label but point to non-existent resume fields, the field is skipped because no value existence check was performed (unlike local maps). Fix: add getResumeValue() check to server mapping matches. Also covers the debugging methodology: add console.log to fillAllFields, check resumeField path, verify whether server fieldMappings are interfering. Related to the nativePlace→birthOrigin shadowing fix.",
+    "tags": [
+        "offerlink",
+        "debugging",
+        "field-mapping",
+        "formfiller"
+    ],
+    "created": "2026-03-10T20:38:00+08:00",
+    "updated": "2026-03-10T20:38:00+08:00",
+    "references": [
+        {
+            "type": "file",
+            "path": "src/content/formFiller.js",
+            "description": "matchResumeField() with server and local mapping layers"
+        },
+        {
+            "type": "file",
+            "path": "src/content/index.js",
+            "description": "Loads fieldMappings from chrome.storage.local"
+        }
+    ]
+}
