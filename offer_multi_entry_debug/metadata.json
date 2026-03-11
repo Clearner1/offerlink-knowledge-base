@@ -1,0 +1,41 @@
+{
+    "title": "OfferLink Multi-Entry Fill: 逆向还原 + Phoenix 适配 Debug 链路",
+    "summary": "Documents the complete debug chain for implementing multi-entry form filling in OfferLink. Covers: (1) Faithful reverse engineering of ExperienceConfigAdapter and ExperienceFiller from module_1479.js, (2) Three-layer debug chain for Phoenix/北森 sites — section container detection failure (no section titles → field-label inference), container re-location failure (synthetic titles → pass container directly), cardSelector mismatch (no card wrappers → label-group indexing fill). Key pattern: when static selectors fail on styled-components sites, infer structure from field content rather than CSS classes.",
+    "tags": [
+        "offerlink",
+        "debugging",
+        "multi-entry",
+        "reverse-engineering",
+        "phoenix",
+        "experiencefiller"
+    ],
+    "created": "2026-03-11T12:11:00+08:00",
+    "updated": "2026-03-11T12:11:00+08:00",
+    "references": [
+        {
+            "type": "file",
+            "path": "src/content/experienceFiller.js",
+            "description": "Multi-entry fill engine with label-group indexing fallback"
+        },
+        {
+            "type": "file",
+            "path": "src/content/experienceConfigAdapter.js",
+            "description": "Configuration adapter wrapping experienceConfig"
+        },
+        {
+            "type": "file",
+            "path": "src/content/formFiller.js",
+            "description": "_handleMultiEntrySections + _inferSectionsByFieldLabels"
+        },
+        {
+            "type": "file",
+            "path": "src/shared/siteConfigs.js",
+            "description": "experienceConfig added to all 5 site configs"
+        },
+        {
+            "type": "file",
+            "path": "extracted/content/module_1479.js",
+            "description": "Original plugin source (lines 62800-63047, 70090-71759)"
+        }
+    ]
+}
